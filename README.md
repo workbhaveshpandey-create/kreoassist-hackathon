@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue)]()
 [![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Mobile-green)]()
 
-**🌐 Live Demo:** [https://kreoassist-web.netlify.app/](https://kreoassist-web.netlify.app/)
+**🌐 Live Demo:** [https://kreoassist-web.netlify.app/](https://kreoassist-web.netlify.app/) | **▶️ Demo Video:** [Watch Project Walkthrough](screenshots/demo_video.mp4)
 
 <img src="screenshots/smart_sos_flow.png" width="500" alt="Smart SOS System Flow">
 
@@ -287,8 +287,7 @@ This section extends the Round-1 prototype to describe *system scaling, reliabil
 ## 🔗 Project Links (Round 2)
 
 *   **Website:** [https://kreoassist-web.netlify.app/](https://kreoassist-web.netlify.app/)
-*   **APK Download:** *(Coming Soon)*
-*   **Demo Video:** [▶️ Watch Project Walkthrough](screenshots/demo_video.mp4)
+*   **APK Download:** [📲 Download App from Website](https://kreoassist-web.netlify.app/)
 
 ---
 
