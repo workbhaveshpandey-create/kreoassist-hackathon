@@ -27,6 +27,15 @@ It empowers communities with **decentralized mesh communication**, **on-device h
 
 ---
 
+## 🧪 Prototype Status
+
+**KreoAssist is implemented as a working prototype with emphasis on:**
+*   **Offline reliability**
+*   **Correctness under stress conditions**
+*   **Graceful degradation during failures**
+
+---
+
 ## 🌟 Key Capabilities
 
 ### 📡 Offline Mesh Network
