@@ -1,5 +1,17 @@
-# KreoAssist
-Offline-First Disaster Management & Emergency Assistance Prototype
+<div align="center">
+
+# 🚨 KreoAssist
+### Offline-First Disaster Management & Emergency Assistance Prototype
+
+[![Status](https://img.shields.io/badge/Status-Prototype-orange)]()
+[![License](https://img.shields.io/badge/License-MIT-blue)]()
+[![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Mobile-green)]()
+
+**🌐 Live Demo:** [https://kreoassist-web.netlify.app/](https://kreoassist-web.netlify.app/)
+
+<img src="screenshots/smart_sos_flow.png" width="500" alt="Smart SOS System Flow">
+
+</div>
 
 ---
 
@@ -9,14 +21,6 @@ KreoAssist is an offline-first disaster management and emergency assistance appl
 
 The application focuses on *resilience, decentralization, and rapid response* by combining device-to-device mesh communication, hybrid AI-based assistance, and direct emergency actions.
 The current implementation serves as a *functional prototype*, validating critical emergency workflows under real-world constraints rather than aiming for full production deployment.
-
-**🌐 Live Demo:** [https://kreoassist-web.netlify.app/](https://kreoassist-web.netlify.app/)
-
-<p align="center">
-  <img src="screenshots/smart_sos_flow.png" width="800" alt="Smart SOS System Flow">
-</p>
-
----
 
 ## 🧪 Prototype Status
 
