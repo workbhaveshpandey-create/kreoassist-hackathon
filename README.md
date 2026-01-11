@@ -10,6 +10,9 @@
 **🌐 Live Demo:** [kreoassist-web.netlify.app](https://kreoassist-web.netlify.app/)
 
 <p align="center">
+  <img src="screenshots/smart_sos_flow.png" width="800" alt="Smart SOS System Flow">
+  <br/>
+  <br/>
   <img src="screenshots/round2_architecture.png" width="800" alt="Round 2 Scaled Architecture">
 </p>
 
