@@ -288,7 +288,7 @@ This section extends the Round-1 prototype to describe *system scaling, reliabil
 
 *   **Website:** [https://kreoassist-web.netlify.app/](https://kreoassist-web.netlify.app/)
 *   **APK Download:** *(Coming Soon)*
-*   **Demo Video:** *(Coming Soon)*
+*   **Demo Video:** [▶️ Watch Project Walkthrough](screenshots/demo_video.mp4)
 
 ---
 
