@@ -88,7 +88,7 @@ The system is built on a modular architecture ensuring separation of concerns be
 
 ## 🛠️ Tech Stack
 
-*   **Frontend:** React / React Native (Expo)
+*   **Frontend:** React (Vite) + TypeScript
 *   **State Management:** Context API & Custom Hooks
 *   **Offline Storage:** Async Storage / LocalStorage wrapper
 *   **Services:** Simulated Bluetooth/Wi-Fi Direct Mesh Layer
