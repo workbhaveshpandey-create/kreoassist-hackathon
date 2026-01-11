@@ -144,6 +144,30 @@ KreoAssist is designed to align with national disaster response frameworks by so
 
 ---
 
+## ⚙️ Failure Handling & Resilience
+KreoAssist is built to survive in hostile environments where systems usually fail.
+
+| **Failure Scenario** | **System Response (Graceful Degradation)** |
+| :--- | :--- |
+| **No Internet/Cellular** | Auto-switches to **Mesh Mode**. AI runs on-device. Maps load from cache. |
+| **GPS Failure** | Uses last known location & triangulates via nearby mesh peers. |
+| **Partial Mesh Fail** | Stores SOS packets locally and retries transmission (Store-and-Forward). |
+| **Low Battery** | Reduces polling rate, disables animations, switches to OLED-black UI. |
+
+---
+
+## 🚀 Scalability & Future Architecture (Round 2)
+
+**1. Mesh Scalability (Multi-Hop)**
+*   **TTL-Based Propagation:** Prevents network congestion by limiting hop count.
+*   **Packet Prioritization:** SOS signals get absolute priority over chat/status messages.
+
+**2. Hybrid Cloud integration**
+*   **Non-Blocking Sync:** Cloud acts as a secondary backup, not a primary dependency.
+*   **Verified Sources:** Government alerts injected into the mesh when a single node connects.
+
+---
+
 ## 🗺️ Extended Roadmap
 
 | Phase | Focus | Key Deliverables |
