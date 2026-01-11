@@ -1,133 +1,102 @@
-# KreoAssist
-**Offline-First Disaster Management & Emergency Assistance System**
+<div align="center">
+
+# 🚨 KreoAssist
+### Offline-First Disaster Management & Emergency Assistance System
+
+[![Status](https://img.shields.io/badge/Status-Prototype-orange)]()
+[![License](https://img.shields.io/badge/License-MIT-blue)]()
+[![Platform](https://img.shields.io/badge/Platform-Web%20%7C%20Mobile-green)]()
+
+**🌐 Live Demo:** [kreoassist-web.netlify.app](https://kreoassist-web.netlify.app/)
+
+<p align="center">
+  <img src="screenshots/system_architecture.png" width="800" alt="System Architecture">
+</p>
+
+</div>
 
 ---
-
-🌐 **Live Website:** [https://kreoassist-web.netlify.app/](https://kreoassist-web.netlify.app/)
 
 ## 📌 Overview
-KreoAssist is an **offline-first disaster management and emergency assistance application** designed for scenarios where conventional communication infrastructure becomes unreliable or completely unavailable.
 
-The system focuses on resilience, decentralization, and rapid response by combining:
-*   **Device-to-device mesh communication**
-*   **Hybrid online + offline AI assistance**
-*   **Direct emergency signaling and medical access**
+**KreoAssist** is a resilient, offline-first emergency response application designed for critical situations where centralized communication infrastructure fails (e.g., floods, earthquakes, or mass network outages). 
 
-The current implementation represents a functional prototype, built to validate critical emergency workflows under real-world disaster constraints.
+It empowers communities with **decentralized mesh communication**, **on-device hybrid AI**, and **vital emergency tools** that work completely without the internet.
+
+> **"When the network goes down, KreoAssist wakes up."**
 
 ---
 
-## 🧪 Prototype Status
-KreoAssist is implemented as a working prototype with emphasis on:
-*   **Offline reliability**
-*   **Correctness under stress conditions**
-*   **Graceful degradation during failures**
+## 🌟 Key Capabilities
 
-### Implemented Capabilities
-*   **Offline-first application:** Fully usable during network outages.
-*   **Hybrid AI Emergency Assistant:**
-    *   Online AI remains usable without offline model.
-    *   Optional offline AI model download.
-*   **One-Tap SOS System:**
-    *   Emergency calling to national services (112, 100, 101, 102).
-    *   Automatic SMS alerts with live GPS location.
-*   **Mesh Network Communication:**
-    *   Bluetooth & Wi-Fi Direct based communication.
-    *   Background scanning even when the app is minimized.
-    *   ![Mesh Network](screenshots/mesh_network.jpg)
-*   **First-Aid Guide:** Fully accessible without internet.
-*   **Rescue Signaling Tools:** Flashlight, SOS Morse-code.
-*   **Offline Maps Support:** Download specific geographic regions.
+### 📡 Offline Mesh Network
+No internet? No problem.
+*   **Device-to-Device:** Communicate via Bluetooth & Wi-Fi Direct.
+*   **Broadcast Alerts:** Send "NEED HELP" or "I'M SAFE" signals to nearby devices.
+*   **Background Scanning:** Detects peers even when the phone is locked.
+
+### 🧠 Hybrid AI Assistant
+Smart guidance, online or offline.
+*   **Zero-Internet Inference:** Switch seamlessly to on-device models when offline.
+*   **First-Aid Guidance:** Immediate instructions for CPR, fractures, and burns.
+*   **Privacy First:** Sensitive health data stays on your device.
+
+### 🆘 One-Tap SOS Dashboard
+Immediate response in milliseconds.
+*   **Direct Emergency Calls:** Instant dialing for Police (100), Fire (101), Ambulance (102).
+*   **GPS SMS Alerts:** Auto-sends live coordinates to trusted contacts.
+*   **Digital Medical ID:** Vital info (Blood Group, Allergies) accessible on lock screen.
 
 ---
 
-## 🎯 Problem Statement
-During disasters such as floods, earthquakes, or mass accidents:
-1.  **Mobile networks fail** or become congested.
-2.  **Emergency instructions are unavailable**.
-3.  **Centralized systems become single points of failure**.
+## 📸 Project Showcase
 
-**KreoAssist addresses these challenges through:**
-*   Decentralized local communication.
-*   Offline intelligence and guidance.
-*   Rapid peer-to-peer coordination.
+| **Mesh Network** | **AI Assistant** |
+|:---:|:---:|
+| <img src="screenshots/mesh_network.jpg" width="300" /> | <img src="screenshots/ai_assistant.jpg" width="300" /> |
+| *Scanning for nearby devices without internet* | *Hybrid AI providing medical guidance* |
 
----
-
-## 🌟 Core Features
-
-### 📡 Offline Mesh Communication
-*   Works without internet or cellular networks.
-*   Uses Bluetooth and Wi-Fi Direct.
-*   Broadcasts emergency states (NEED HELP, I’M SAFE).
-
-### 🧠 Hybrid AI Emergency Assistant
-*   Automatically switches between Online inference and On-device AI models.
-*   Provides guidance for CPR, Burns, Fractures, Choking.
-*   ![AI Assistant](screenshots/ai_assistant.jpg)
-
-### 🆘 Emergency SOS Dashboard
-*   One-tap SOS triggers calls to 112 and SMS alerts.
-*   Quick-dial buttons for Police (100), Fire (101), Ambulance (102).
-*   ![SOS Dashboard](screenshots/sos_dashboard1.jpg)
-
-### 🏥 Offline First-Aid & Medical ID
-*   Step-by-step emergency instructions.
-*   **Digital Medical Emergency ID:** Stores Blood group, Allergies, Chronic conditions.
-*   ![Medical ID](screenshots/digital_medical_id1.jpg)
+| **SOS Dashboard** | **Medical ID** |
+|:---:|:---:|
+| <img src="screenshots/sos_dashboard1.jpg" width="300" /> | <img src="screenshots/digital_medical_id1.jpg" width="300" /> |
+| *One-tap emergency triggers* | *Critical health info for rescuers* |
 
 ---
 
 ## 🧩 System Architecture
 
-![System Architecture](screenshots/system_architecture.png)
-*High-level architecture showing the interaction between UI, Logic, and Local Services.*
+The system is built on a modular architecture ensuring separation of concerns between the UI, Logic, and distinct System Services.
 
-### System Flow
-![System Flow](screenshots/system_flow.png)
-*Flow of data from User Interaction to Mesh Network and AI Engine.*
+> **Round 1:** Core Functional Prototype
+> <br/>
+> <img src="screenshots/system_flow.png" width="600" />
 
-### SOS Data Flow
-![SOS DFD](screenshots/sos_dfd.png)
-*Data flow diagram for the Emergency SOS system.*
-
----
-
-## 🛠️ Technology Stack
-*   **Framework:** React Native / Expo (Prototype logic ported to React for web).
-*   **State Management:** Context API & Custom Hooks.
-*   **Connectivity:** Simulated Bluetooth/Wi-Fi Direct logic.
-*   **AI Engine:** Hybrid inference mock-up.
+> **Round 2:** Scaled Ecosystem (Planned)
+> <br/>
+> <img src="screenshots/round2_architecture.png" width="600" />
 
 ---
 
-## 👥 Team & Contributions (Kreodev)
+## 🛠️ Tech Stack
 
-| Member | Role | Responsibility |
-| :--- | :--- | :--- |
-| **Bhavesh (`workbhaveshpandey-create`)** | **Logic Lead** | Core Application Loop & Hooks (`src/hooks`) |
-| **Gaurav (`SGarryy`)** | **Backend** | Storage & API Services (`src/services`) |
-| **Aastha (`gehuaastha2008-ux`)** | **UI/UX** | Design System & Styling (`src/components/ui`) |
-| **Kalpana (`kalpana1957`)** | **Features** | Core Sections (`src/components/sections`) |
+*   **Frontend:** React / React Native (Expo)
+*   **State Management:** Context API & Custom Hooks
+*   **Offline Storage:** Async Storage / LocalStorage wrapper
+*   **Services:** Simulated Bluetooth/Wi-Fi Direct Mesh Layer
 
 ---
 
-## 🚀 Round-2: Scaled System & Full Solution Plan
+## 👥 Kreodev Team Contributors
 
-**Scalability & Failure Handling**
-*   **Offline-first remains primary guarantee.**
-*   Multi-hop mesh message propagation.
-*   TTL-based message control.
-*   Optional cloud services for verified alerts & analytics.
-
-![Round 2 Architecture](screenshots/round2_architecture.png)
-*Scaled system architecture planning for Round 2.*
-
-### 🔐 Governance & Compliance Readiness
-*   Compatible with government alert systems.
-*   Standardized emergency data formats.
-*   Privacy-first data handling (No mandatory central servers).
+| Member | GitHub | Role | Contribution Area |
+| :--- | :--- | :--- | :--- |
+| **Bhavesh** | [`workbhaveshpandey-create`](https://github.com/workbhaveshpandey-create) | **Logic Lead** | Hooks & Core App Loop |
+| **Gaurav** | [`SGarryy`](https://github.com/SGarryy) | **Backend** | API & Storage Services |
+| **Aastha** | [`gehuaastha2008-ux`](https://github.com/gehuaastha2008-ux) | **UI/UX** | Design System & Components |
+| **Kalpana** | [`kalpana1957`](https://github.com/kalpana1957) | **Features** | Page Sections & Layouts |
 
 ---
 
-©️ 2025 Kreodev. All rights reserved.
+<div align="center">
+  <sub>©️ 2025 Kreodev. Built for Resilience.</sub>
+</div>
