@@ -160,7 +160,9 @@ Flow description:
 *   Emergency packets are broadcast to nearby devices via mesh networking
 *   Mesh nodes propagate safety status locally
 
+<p align="center">
 <img src="screenshots/system_flow.png" width="460"/>
+</p>
 
 ---
 
@@ -177,7 +179,9 @@ Data flow:
 *   SOS message payload is broadcast over the mesh network
 *   Nearby devices receive and display emergency status updates
 
+<p align="center">
 <img src="screenshots/sos_dfd.png" width="520"/>
+</p>
 
 ---
 
@@ -224,7 +228,9 @@ KreoAssist follows a modular architecture designed to support both online and of
 *   SOS handler manages emergency signaling
 *   Mesh controller distributes messages to nearby devices
 
+<p align="center">
 <img src="screenshots/system_architecture.png" width="500"/>
+</p>
 
 ---
 
