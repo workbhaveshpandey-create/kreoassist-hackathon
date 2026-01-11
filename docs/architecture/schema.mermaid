@@ -1,0 +1,14 @@
+erDiagram
+    USER_PREFS {
+        string theme
+        boolean notifications
+        string language
+    }
+    
+    AUTH_TOKEN {
+        string token
+        date expiry
+    }
+    
+    USER_PREFS ||--|| LOCAL_STORAGE : stores
+    AUTH_TOKEN ||--|| LOCAL_STORAGE : stores

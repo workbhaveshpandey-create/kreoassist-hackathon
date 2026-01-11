@@ -1,0 +1,14 @@
+graph TD
+    User([User])
+    UI[Frontend UI]
+    Logic[Application Logic]
+    Storage[Local Storage Service]
+    API[Mock API Service]
+    
+    User -->|Interacts| UI
+    UI -->|Triggers| Logic
+    Logic -->|Reads/Writes| Storage
+    Logic -->|Fetches Data| API
+    
+    Storage -->|Persists| LocalDB[(Browser Storage)]
+    API -->|Simulates Response| Logic
