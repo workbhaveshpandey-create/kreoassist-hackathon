@@ -1,14 +1,52 @@
 graph TD
-    User([User])
-    UI[Frontend UI]
-    Logic[Application Logic]
-    Storage[Local Storage Service]
-    API[Mock API Service]
-    
+    %% Styling
+    classDef user fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef frontend fill:#aff,stroke:#333,stroke-width:2px;
+    classDef logic fill:#fea,stroke:#333,stroke-width:2px;
+    classDef storage fill:#dfd,stroke:#333,stroke-width:2px;
+    classDef external fill:#ddf,stroke:#333,stroke-width:2px;
+
+    User([👤 User]) ::: user
+
+    subgraph "📱 User Device (Offline-First)"
+        direction TB
+        
+        subgraph "Frontend Layer"
+            UI[🖥️ React UI Components] ::: frontend
+            SOS_BTN[🚨 SOS Button] ::: frontend
+        end
+
+        subgraph "Application Layer"
+            Hooks[⚛️ Custom Hooks (useAppInit, useSOS)] ::: logic
+            Router[🔀 App Router] ::: logic
+        end
+
+        subgraph "Local Services Layer"
+            Store[💾 Local Storage (Persisted Data)] ::: storage
+            Mesh[📡 Mesh Network Simulator] ::: storage
+            AI_Engine[🧠 Hybrid AI Engine (Mock)] ::: storage
+        end
+    end
+
+    subgraph "🌍 External World"
+        CloudAPI[☁️ Cloud API (Optional/Online)] ::: external
+        PeerDevices[📱 Nearby Peer Devices] ::: external
+        GPS[🛰️ GPS Satellites] ::: external
+    end
+
+    %% Flows
     User -->|Interacts| UI
-    UI -->|Triggers| Logic
-    Logic -->|Reads/Writes| Storage
-    Logic -->|Fetches Data| API
+    User -->|Presses| SOS_BTN
     
-    Storage -->|Persists| LocalDB[(Browser Storage)]
-    API -->|Simulates Response| Logic
+    UI -->|Render Data| Hooks
+    SOS_BTN -->|Trigger Alert| Hooks
+    
+    Hooks -->|Read/Write Prefs| Store
+    Hooks -->|Get Location| GPS
+    Hooks -->|Broadcast Alert| Mesh
+    Hooks -->|Inference Request| AI_Engine
+    
+    Mesh -->|Propagate Signal| PeerDevices
+    AI_Engine -.->|Fallback to Online| CloudAPI
+    
+    Store -->|Persist User/Medical Data| LocalDB[(IndexedDB/LocalStorage)]

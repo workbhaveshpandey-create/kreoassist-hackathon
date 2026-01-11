@@ -106,6 +106,54 @@ The system is built on a modular architecture ensuring separation of concerns be
 
 ---
 
+---
+
+## 🏃 Getting Started
+
+### Prerequisites
+*   Node.js (v18+)
+*   npm or yarn
+
+### Installation
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/workbhaveshpandey-create/kreoassist-hackathon.git
+    cd kreoassist-hackathon
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## 🔐 Governance & Compliance (Mission Alignment)
+KreoAssist is designed to align with national disaster response frameworks by solving key governance challenges:
+
+1.  **Decentralized Resilience:** Eliminates single points of failure (like cell towers).
+2.  **Standardized Data:** Uses compliant formats for Medical IDs and SOS signals.
+3.  **Privacy by Design:** No mandatory cloud storage; data is user-owned.
+
+> *This aligns with the goal of creating resilient public safety infrastructure that functions even when the grid fails.*
+
+---
+
+## 🗺️ Extended Roadmap
+
+| Phase | Focus | Key Deliverables |
+| :--- | :--- | :--- |
+| **Phase 1 (Current)** | **Prototype & Validation** | Core Mesh logic, Offline AI, Medical ID, Basic SOS. |
+| **Phase 2 (Next)** | **Scalability** | Multi-hop mesh routing (TTL), Government Alert integration, Cloud Sync. |
+| **Phase 3** | **Production** | Verifiable Credential integration for Medical IDs, Hardware SOS Device integration. |
+
+---
+
 <div align="center">
   <sub>©️ 2025 Kreodev. Built for Resilience.</sub>
 </div>
