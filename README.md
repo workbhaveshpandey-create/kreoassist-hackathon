@@ -112,4 +112,22 @@ During disasters such as floods, earthquakes, or mass accidents:
 
 ---
 
+## 🚀 Round-2: Scaled System & Full Solution Plan
+
+**Scalability & Failure Handling**
+*   **Offline-first remains primary guarantee.**
+*   Multi-hop mesh message propagation.
+*   TTL-based message control.
+*   Optional cloud services for verified alerts & analytics.
+
+![Round 2 Architecture](screenshots/round2_architecture.png)
+*Scaled system architecture planning for Round 2.*
+
+### 🔐 Governance & Compliance Readiness
+*   Compatible with government alert systems.
+*   Standardized emergency data formats.
+*   Privacy-first data handling (No mandatory central servers).
+
+---
+
 ©️ 2025 Kreodev. All rights reserved.
