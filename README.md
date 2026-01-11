@@ -31,28 +31,39 @@ In mass casualty events or natural disasters (floods, earthquakes), centralized 
 ## 🌟 Detailed System Capabilities
 
 ### 1. Decentralized Mesh Ecosystem (The "Shadow Network")
-When cellular towers fail, KreoAssist nodes self-organize.
-*   **Packet Propagation Protocol:** We utilize a custom store-and-forward mechanism over Bluetooth LE and Wi-Fi Direct. If a node cannot find an internet gateway, it holds the SOS packet and relays it to the next moving node (e.g., a drone or rescue vehicle).
+When cellular towers fail, KreoAssist nodes self-organize. This is the backbone of our resilience strategy.
+*   **Packet Propagation Protocol:** We utilize a custom store-and-forward mechanism over Bluetooth LE and Wi-Fi Direct. If a node cannot find an internet gateway, it holds the SOS packet and relays it to the next moving node (e.g., a drone or rescue vehicle). This creates a "data mule" network during total blackouts.
 *   **Invisible Handshake:** The app continuously scans for authorized government rescue beacons in the background, ensuring that a "silent" phone in a pocket can still receive critical "Evacuate" signals.
-*   **Trust Layer:** Unlike open meshes, KreoAssist prevents spam by signing high-priority alerts with a verified government key (planned integration), ensuring only real threats trigger mass notifications.
+*   **Trust Layer:** Unlike open meshes, KreoAssist prevents spam by signing high-priority alerts. In Round 2, we implement verify-on-forward logic, meaning only signed alerts from trusted nodes (e.g., authorities) trigger mass broadcasts.
 
 ### 2. Hybrid AI Intelligence (Edge-First Design)
 Our AI doesn't just "work offline"; it is optimized for extreme constraints.
-*   **Context-Aware Triage:** The on-device model isn't a generic chatbot. It is fine-tuned on emergency medical protocols (Red Cross/St John Ambulance standards). It assesses user inputs (e.g., "bleeding leg", "can't breathe") and prioritizes life-saving actions over comfort care.
+*   **Context-Aware Triage:** The on-device model isn't a generic chatbot. It is fine-tuned on emergency medical protocols (Red Cross/St John Ambulance standards). It assesses user inputs (e.g., "bleeding leg", "can't breathe") and prioritizes life-saving actions over comfort care. This effectively acts as an automated first responder.
 *   **Zero-Latency Inference:** By running locally (TensorFlow Lite / ONNX), we eliminate the 200ms-2s round-trip latency of cloud models, which is critical when every second counts during CPR or hemorrhage control.
-*   **Privacy Sandbox:** Medical queries and history never leave the device unless explicitly included in an encrypted SOS package.
+*   **Privacy Sandbox:** Medical queries and history never leave the device unless explicitly included in an encrypted SOS package. This ensures HIPAA compliance even in chaotic environments.
 
 ### 3. The Scaled SOS Protocol (Governance Aligned)
 Features designed for National Emergency Frameworks.
 *   **Multi-Channel Signal Blast:**
     *   **Layer 1 (Direct):** Dials 112/100/101/102 immediately.
     *   **Layer 2 (SMS/GPS):** Sends a structured text with non-internet GPS coordinates to trusted contacts.
-    *   **Layer 3 (Mesh):** Broadcasts a high-priority " distress beacon" payload containing the Digital Medical ID.
-*   **Rescuer Mode Interface:** When a verified First Responder opens the app, they see a heat map of active SOS signals, enabling triage based on severity rather than just proximity.
+    *   **Layer 3 (Mesh):** Broadcasts a high-priority "distress beacon" payload containing the Digital Medical ID.
+*   **Rescuer Mode Interface:** When a verified First Responder opens the app, they see a heat map of active SOS signals, enabling triage based on severity rather than just proximity. This optimizes rescue resource distribution.
 
 ### 4. Verifiable Digital Medical Identity
 *   **Lock-Screen Projection:** Critical data (Blood Type, Allergies, Diabetic Status) is rendered into a persistent notification/widget, allowing paramedics to treat unconscious patients without unlocking the phone.
 *   **Standardized Schema:** Data is stored in FHIR-compatible JSON formats, ensuring that when connectivity is restored, the patient history can be seamlessly ingested by Hospital Information Systems (HIS).
+
+### 5. Failure Handling & Resilience (Graceful Degradation)
+KreoAssist is engineered to survive in hostile environments where typical commercial apps collapse.
+
+| **Failure Scenario** | **System Response** |
+| :--- | :--- |
+| **No Internet/Cellular** | Auto-switches to **Mesh Mode**. AI runs wholly on-device. Maps load from vector cache. |
+| **GPS Failure** | Falls back to cell-tower triangulation or nearby mesh peer location estimation. |
+| **Partial Mesh Fail** | Stores SOS packets locally in a priority queue and retries transmission upon any new node discovery (Store-and-Forward). |
+| **Low Battery** | Reduces polling rate, disables complex animations, and switches to high-contrast OLED black UI to extend runtime. |
+| **AI Model Missing** | Falls back to a deterministic First-Aid decision tree (Rule-based system) bundled with the app core. |
 
 ---
 
@@ -73,34 +84,9 @@ Features designed for National Emergency Frameworks.
 ## 🔐 Governance & Mission Alignment
 KreoAssist is engineered to plug directly into National Disaster Response Force (NDRF) and Public Safety capabilities:
 
-1.  **Resilience:** It functionality does not degrade; it shifts modes.
+1.  **Resilience:** Functionality does not degrade; it shifts modes.
 2.  **Interoperability:** JSON-based data exchange allows integration with Government Command Centers.
 3.  **Sovereignty:** No reliance on foreign cloud servers for critical operation.
-
----
-
-## 🏃 Getting Started
-
-### Prerequisites
-*   Node.js (v18+)
-*   npm or yarn
-
-### Installation
-1.  **Clone the Repository**
-    ```bash
-    git clone https://github.com/workbhaveshpandey-create/kreoassist-hackathon.git
-    cd kreoassist-hackathon
-    ```
-
-2.  **Install Dependencies**
-    ```bash
-    npm install
-    ```
-
-3.  **Launch Ecosystem**
-    ```bash
-    npm run dev
-    ```
 
 ---
 
