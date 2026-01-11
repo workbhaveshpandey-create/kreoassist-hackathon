@@ -236,7 +236,7 @@ KreoAssist follows a modular architecture designed to support both online and of
 
 ## 🛠️ Technology Stack
 
-*   Framework: React (Vite) + TypeScript
+*   Framework: Flutter (Dart) / React (Web Dashboard)
 *   State Management: Context API & Custom Hooks
 *   Connectivity: Simulated Bluetooth and Wi-Fi Direct
 *   Location Services: Browser Geolocation API
